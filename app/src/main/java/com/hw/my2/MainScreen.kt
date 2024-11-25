@@ -7,7 +7,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.hw.my2.viewmodel.MainViewModel
-import coil.compose.AsyncImage
+import com.hw.my2.GifImage
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -53,16 +53,6 @@ fun MainScreen(viewModel: MainViewModel = viewModel()) {
     }
 }
 
-@Composable
-fun GifImage(url: String) {
-    AsyncImage(
-        model = url,
-        contentDescription = null,
-        modifier = Modifier
-            .fillMaxWidth()
-            .aspectRatio(1f)
-    )
-}
 
 @Composable
 fun ErrorPlaceholder(message: String?, onRetry: () -> Unit) {
